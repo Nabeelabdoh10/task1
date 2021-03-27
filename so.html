@@ -1,0 +1,65 @@
+<html>
+<body>
+<style>
+#first_div{width:50%}
+#second_div{width:50%}
+</style>
+<div style="display:flex">
+
+<div id="first_div">
+<form name="myform">
+<div>
+<label>Student Name</label>
+<input type="text" name="sname" />
+</div>
+
+
+<div>
+<label>Student ID</label>
+<input type="text" name="sid" />
+</div>
+
+<div>
+<label>Student GPA</label>
+<input type="text" name="sgpa" />
+</div>
+
+<div>
+<input type="button" value="Add" onclick="myfunction()" />
+</div>
+
+
+
+</form>
+</div>
+
+<div id="second_div">
+
+</div>
+
+
+
+
+</div>
+
+<script>
+let named=document.myform.sname;
+let stid=document.myform.sid;
+let gpa=document.myform.sgpa;
+
+function myfunction(){
+
+if(named.value!="" && stid.value!="" && gpa.value!=""){
+alert("You have successfully added "+named.value);
+document.getElementById('second_div').innerHTML+=named.value+"<br />";
+}
+
+else{
+alert("Faild, fill in the boxes");
+}
+}
+</script>
+
+</body>
+
+</html>
